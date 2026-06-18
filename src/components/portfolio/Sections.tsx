@@ -339,7 +339,7 @@ export function Projects() {
 
 function ProjectVisual({ index, title }: { index: number; title: string }) {
   const imageMap: Record<number, string[]> = {
-    0: ["/banana_unit.png", "/banana_unit2.png"], // add more paths here as you drop images in /public
+    0: ["/banana_unit.png", "/banana_unit2.png", "/banana_unit4.png", "/banana_unit3.png", "/banana_unit5.png"], // add more paths here as you drop images in /public
     1: ["/project2.png"],
     2: ["/project3.png"],
   };
