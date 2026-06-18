@@ -18,6 +18,8 @@ import {
   GraduationCap,
   Users,
   ArrowRight,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { resume } from "@/data/resume";
 import { Wireframe } from "./Wireframe";
@@ -336,22 +338,95 @@ export function Projects() {
 }
 
 function ProjectVisual({ index, title }: { index: number; title: string }) {
-  const images: Record<number, string> = {
-0: ["/banana_unit.png", "/banana_unit2.png"],
-    1: "/project2.png",
-    2: "/project3.png",
+  const imageMap: Record<number, string[]> = {
+    0: ["/banana_unit.png", "/banana_unit2.png"], // add more paths here as you drop images in /public
+    1: ["/project2.png"],
+    2: ["/project3.png"],
+  };
+
+  const slides = imageMap[index] ?? [];
+  const [current, setCurrent] = useState(0);
+  const [fading, setFading] = useState(false);
+
+  if (slides.length === 0) {
+    return (
+      <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border bg-[#0a0f1e]">
+        <div className="absolute inset-0 bg-grid opacity-50" />
+      </div>
+    );
+  }
+
+  const goTo = (idx: number) => {
+    if (idx === current || fading) return;
+    setFading(true);
+    setTimeout(() => {
+      setCurrent(idx);
+      setFading(false);
+    }, 180);
+  };
+
+  const prev = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    goTo((current - 1 + slides.length) % slides.length);
+  };
+
+  const next = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    goTo((current + 1) % slides.length);
   };
 
   return (
     <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border bg-[#0a0f1e]">
-      {images[index] ? (
-        <img
-          src={images[index]}
-          alt={title}
-          className="absolute inset-0 w-full h-full object-contain p-4"
-        />
-      ) : (
-        <div className="absolute inset-0 bg-grid opacity-50" />
+
+      {/* Image with fade */}
+      <img
+        src={slides[current]}
+        alt={`${title} — view ${current + 1}`}
+        className="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-200"
+        style={{ opacity: fading ? 0 : 1 }}
+      />
+
+      {slides.length > 1 && (
+        <>
+          {/* Left arrow */}
+          <button
+            onClick={prev}
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 grid h-8 w-8 place-items-center rounded-full border border-white/10 bg-black/50 backdrop-blur text-white/60 hover:text-white hover:border-white/30 transition-all"
+            aria-label="Previous image"
+          >
+            <ChevronLeft size={16} />
+          </button>
+
+          {/* Right arrow */}
+          <button
+            onClick={next}
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 grid h-8 w-8 place-items-center rounded-full border border-white/10 bg-black/50 backdrop-blur text-white/60 hover:text-white hover:border-white/30 transition-all"
+            aria-label="Next image"
+          >
+            <ChevronRight size={16} />
+          </button>
+
+          {/* Dot indicators */}
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                onClick={(e) => { e.stopPropagation(); goTo(i); }}
+                aria-label={`Go to image ${i + 1}`}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  i === current
+                    ? "w-4 bg-accent"
+                    : "w-1.5 bg-white/30 hover:bg-white/60"
+                }`}
+              />
+            ))}
+          </div>
+
+          {/* Image counter */}
+          <div className="absolute top-2 right-2 z-10 rounded px-2 py-0.5 bg-black/50 backdrop-blur font-mono text-[10px] text-white/50">
+            {current + 1} / {slides.length}
+          </div>
+        </>
       )}
     </div>
   );
