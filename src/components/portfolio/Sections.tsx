@@ -205,7 +205,7 @@ export function About() {
                 >
                   <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-primary/10 blur-2xl group-hover:bg-primary/20 transition" />
                   <div className="relative text-4xl font-semibold text-gradient">
-                    <Counter value={s.value} suffix={s.suffix ?? ""} />
+                    <Counter value={s.value} suffix={"suffix" in s ? s.suffix : ""} />
                   </div>
                   <div className="relative mt-2 text-xs font-mono uppercase tracking-widest text-muted-foreground">
                     {s.label}
