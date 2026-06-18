@@ -336,60 +336,27 @@ export function Projects() {
 }
 
 function ProjectVisual({ index, title }: { index: number; title: string }) {
-  // distinct blueprint-style visual per project, generated procedurally
+  const images: Record<number, string> = {
+    0: "/banana-mpu.png",   // ← your banana MPU image goes here
+    1: "/project2.png",     // for your 2nd project
+    2: "/project3.png",     // for your 3rd project
+  };
+
   return (
     <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border bg-gradient-to-br from-surface to-background">
-      <div className="absolute inset-0 bg-grid opacity-50" />
-      <svg viewBox="0 0 400 300" className="absolute inset-0 w-full h-full">
-        <defs>
-          <linearGradient id={`pg${index}`} x1="0" x2="1" y1="0" y2="1">
-            <stop offset="0%" stopColor="oklch(0.66 0.22 255)" stopOpacity="0.9" />
-            <stop offset="100%" stopColor="oklch(0.78 0.16 215)" stopOpacity="0.9" />
-          </linearGradient>
-        </defs>
-        {index === 0 && (
-          <g fill="none" stroke={`url(#pg${index})`} strokeWidth="1.2">
-            <rect x="60" y="80" width="280" height="140" rx="10" />
-            <rect x="80" y="100" width="80" height="100" rx="4" />
-            <rect x="180" y="100" width="60" height="100" rx="4" />
-            <rect x="260" y="100" width="60" height="100" rx="4" />
-            <circle cx="100" cy="240" r="14" />
-            <circle cx="300" cy="240" r="14" />
-            <path d="M30 150 L60 150 M340 150 L370 150" />
-          </g>
-        )}
-        {index === 1 && (
-          <g fill="none" stroke={`url(#pg${index})`} strokeWidth="1.2">
-            <circle cx="200" cy="150" r="80" />
-            <circle cx="200" cy="150" r="50" />
-            <circle cx="200" cy="150" r="20" />
-            <path d="M200 30 L200 270 M80 150 L320 150" />
-            <rect x="160" y="110" width="80" height="80" />
-            <path d="M170 130 L230 170 M230 130 L170 170" />
-          </g>
-        )}
-        {index === 2 && (
-          <g fill="none" stroke={`url(#pg${index})`} strokeWidth="1.2">
-            <rect x="60" y="120" width="280" height="80" rx="10" />
-            <circle cx="110" cy="220" r="24" />
-            <circle cx="290" cy="220" r="24" />
-            <path d="M60 160 L40 160 L40 140 M340 160 L360 160 L360 140" />
-            <rect x="160" y="80" width="80" height="40" rx="4" />
-            <path d="M110 220 L290 220" strokeDasharray="3 4" />
-          </g>
-        )}
-        {/* dim labels */}
-        <g fill="oklch(0.78 0.16 215)" fontSize="8" fontFamily="ui-monospace,monospace" opacity="0.7">
-          <text x="10" y="20">PROJ-{String(index + 1).padStart(3, "0")}</text>
-          <text x="320" y="20">REV.A</text>
-          <text x="10" y="290">{title.slice(0, 26).toUpperCase()}</text>
-          <text x="350" y="290">1:1</text>
-        </g>
-      </svg>
+      {images[index] ? (
+        <img
+          src={images[index]}
+          alt={title}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      ) : (
+        // fallback SVG if no image provided
+        <div className="absolute inset-0 bg-grid opacity-50" />
+      )}
     </div>
   );
 }
-
 /* ---------- RESEARCH ---------- */
 
 export function Research() {
