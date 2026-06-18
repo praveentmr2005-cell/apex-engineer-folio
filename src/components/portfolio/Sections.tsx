@@ -388,24 +388,28 @@ function ProjectVisual({ index, title }: { index: number; title: string }) {
 
       {slides.length > 1 && (
         <>
-          {/* Left arrow */}
+         {/* Left arrow */}
 <button
   onClick={prev}
-  className="absolute left-3 top-1/2 -translate-y-1/2 z-10 grid h-12 w-12 place-items-center rounded-full border border-accent/50 bg-black/70 backdrop-blur-md text-accent transition-all duration-200 hover:scale-110 hover:bg-accent/20 hover:border-accent hover:text-white"
-  style={{ boxShadow: '0 0 20px 2px color-mix(in oklab, var(--accent) 40%, transparent)' }}
+  className="absolute left-3 top-1/2 -translate-y-1/2 z-10 grid h-12 w-12 place-items-center rounded-full border border-white/40 bg-white/10 backdrop-blur-xl text-white transition-all duration-200 hover:scale-110 hover:bg-white hover:text-gray-900 hover:border-white"
+  style={{
+    boxShadow: '0 0 28px 6px rgba(255,255,255,0.18), inset 0 1px 0 rgba(255,255,255,0.30)'
+  }}
   aria-label="Previous image"
 >
-  <ChevronLeft size={24} strokeWidth={2} />
+  <ChevronLeft size={22} strokeWidth={2.5} />
 </button>
 
 {/* Right arrow */}
 <button
   onClick={next}
-  className="absolute right-3 top-1/2 -translate-y-1/2 z-10 grid h-12 w-12 place-items-center rounded-full border border-accent/50 bg-black/70 backdrop-blur-md text-accent transition-all duration-200 hover:scale-110 hover:bg-accent/20 hover:border-accent hover:text-white"
-  style={{ boxShadow: '0 0 20px 2px color-mix(in oklab, var(--accent) 40%, transparent)' }}
+  className="absolute right-3 top-1/2 -translate-y-1/2 z-10 grid h-12 w-12 place-items-center rounded-full border border-white/40 bg-white/10 backdrop-blur-xl text-white transition-all duration-200 hover:scale-110 hover:bg-white hover:text-gray-900 hover:border-white"
+  style={{
+    boxShadow: '0 0 28px 6px rgba(255,255,255,0.18), inset 0 1px 0 rgba(255,255,255,0.30)'
+  }}
   aria-label="Next image"
 >
-  <ChevronRight size={24} strokeWidth={2} />
+  <ChevronRight size={22} strokeWidth={2.5} />
 </button>
 
           {/* Dot indicators */}
