@@ -337,7 +337,7 @@ export function Projects() {
 
 function ProjectVisual({ index, title }: { index: number; title: string }) {
   const images: Record<number, string> = {
-    0: "/banana_unit.png",
+0: ["/banana_unit.png", "/banana_unit2.png", "/banana-side.png", "/banana-detail.png"],
     1: "/project2.png",
     2: "/project3.png",
   };
