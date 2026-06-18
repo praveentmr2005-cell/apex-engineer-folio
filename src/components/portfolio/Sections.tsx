@@ -337,21 +337,20 @@ export function Projects() {
 
 function ProjectVisual({ index, title }: { index: number; title: string }) {
   const images: Record<number, string> = {
-    0: "/banana-mpu.png",   // ← your banana MPU image goes here
-    1: "/project2.png",     // for your 2nd project
-    2: "/project3.png",     // for your 3rd project
+    0: "/banana_unit.png",
+    1: "/project2.png",
+    2: "/project3.png",
   };
 
   return (
-    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border bg-gradient-to-br from-surface to-background">
+    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border bg-[#0a0f1e]">
       {images[index] ? (
         <img
           src={images[index]}
           alt={title}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-contain p-4"
         />
       ) : (
-        // fallback SVG if no image provided
         <div className="absolute inset-0 bg-grid opacity-50" />
       )}
     </div>
