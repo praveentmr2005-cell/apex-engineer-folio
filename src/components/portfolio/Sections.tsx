@@ -389,22 +389,24 @@ function ProjectVisual({ index, title }: { index: number; title: string }) {
       {slides.length > 1 && (
         <>
           {/* Left arrow */}
-          <button
-            onClick={prev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 grid h-8 w-8 place-items-center rounded-full border border-white/10 bg-black/50 backdrop-blur text-white/60 hover:text-white hover:border-white/30 transition-all"
-            aria-label="Previous image"
-          >
-            <ChevronLeft size={16} />
-          </button>
+<button
+  onClick={prev}
+  className="absolute left-3 top-1/2 -translate-y-1/2 z-10 grid h-12 w-12 place-items-center rounded-full border border-accent/50 bg-black/70 backdrop-blur-md text-accent transition-all duration-200 hover:scale-110 hover:bg-accent/20 hover:border-accent hover:text-white"
+  style={{ boxShadow: '0 0 20px 2px color-mix(in oklab, var(--accent) 40%, transparent)' }}
+  aria-label="Previous image"
+>
+  <ChevronLeft size={24} strokeWidth={2} />
+</button>
 
-          {/* Right arrow */}
-          <button
-            onClick={next}
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 grid h-8 w-8 place-items-center rounded-full border border-white/10 bg-black/50 backdrop-blur text-white/60 hover:text-white hover:border-white/30 transition-all"
-            aria-label="Next image"
-          >
-            <ChevronRight size={16} />
-          </button>
+{/* Right arrow */}
+<button
+  onClick={next}
+  className="absolute right-3 top-1/2 -translate-y-1/2 z-10 grid h-12 w-12 place-items-center rounded-full border border-accent/50 bg-black/70 backdrop-blur-md text-accent transition-all duration-200 hover:scale-110 hover:bg-accent/20 hover:border-accent hover:text-white"
+  style={{ boxShadow: '0 0 20px 2px color-mix(in oklab, var(--accent) 40%, transparent)' }}
+  aria-label="Next image"
+>
+  <ChevronRight size={24} strokeWidth={2} />
+</button>
 
           {/* Dot indicators */}
           <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
