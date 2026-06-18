@@ -5,7 +5,6 @@ import {
   Download,
   Mail,
   Phone,
-  Linkedin,
   MapPin,
   Award,
   Sparkles,
@@ -724,7 +723,7 @@ export function Contact() {
               <ContactRow icon={<Mail size={16} />} label="Email" value={resume.email} href={`mailto:${resume.email}`} />
               <ContactRow icon={<Phone size={16} />} label="Phone" value={resume.phone} href={`tel:${resume.phone.replace(/\s+/g, "")}`} />
               <ContactRow
-                icon={<Linkedin size={16} />}
+                icon={<LinkedinIcon />}
                 label="LinkedIn"
                 value="arun-kumar-7755492a5"
                 href={resume.linkedin}
