@@ -1,5 +1,5 @@
 export const resume = {
-  name: "Arunkumar S",
+  name: "Arunkumar Sundaravel",
   tag: "Founder • Researcher • Mechanical Engineer",
   location: "Chennai, Tamil Nadu, India",
   email: "arunpvtz2108@gmail.com",
