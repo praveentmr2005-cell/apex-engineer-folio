@@ -78,6 +78,33 @@ export const resume = {
       ],
     },
     {
+  title: "AI-Assisted Lignite Rock Separation System",
+  organization: "NLC India Limited, Neyveli",
+  description:
+    "Designed and developed an AI-assisted rock separation system for lignite mining operations using computer vision, conveyor systems, pneumatic diversion mechanisms, and mechanical screening.",
+  technologies: [
+    "SolidWorks",
+    "YOLOv11",
+    "Python",
+    "Mechanical Design",
+    "Pneumatic Systems",
+    "Conveyor Design"
+  ],
+  highlights: [
+    "Designed conveyor-based material handling system",
+    "Integrated YOLOv11 object detection",
+    "Developed pneumatic rock diversion mechanism",
+    "Improved lignite stream quality through automated segregation"
+  ],
+images: [
+  "/images/nlc-1.jpg",
+  "/images/nlc-2.jpg",
+  "/images/nlc-3.jpg",
+  "/images/nlc-4.jpg"
+],
+  featured: true
+}
+    {
       title: "Driver Authentication & Monitoring System",
       client: "Coursework",
       duration: "Jan 2025 – May 2025",
