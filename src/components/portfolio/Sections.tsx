@@ -286,7 +286,7 @@ export function Projects() {
               <article className="group relative grid lg:grid-cols-[1.1fr,1fr] gap-8 rounded-3xl border border-border bg-surface/40 backdrop-blur p-6 md:p-10 hover:border-primary/40 transition overflow-hidden">
                 <div className="absolute -inset-px rounded-3xl opacity-0 group-hover:opacity-100 transition pointer-events-none [background:linear-gradient(135deg,color-mix(in_oklab,var(--primary)_30%,transparent),transparent_60%)]" />
 
-                <ProjectVisual index={i} title={p.title} />
+                <ProjectVisual images={p.images} title={p.title} />
 
                 <div className="relative">
                   <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
@@ -337,16 +337,8 @@ export function Projects() {
   );
 }
 
-function ProjectVisual({ index, title }: { index: number; title: string }) {
-  const imageMap: Record<number, string[]> = {
-    0: ["/banana_unit.png", "/banana_unit2.png", "/banana_unit4.png", "/banana_unit3.png", "/banana_unit5.png"], // add more paths here as you drop images in /public
-    1: ["/project2.png"],
-    2: ["/project3.png"],
-  };
-
-  const slides = imageMap[index] ?? [];
-  const [current, setCurrent] = useState(0);
-  const [fading, setFading] = useState(false);
+function ProjectVisual({ images, title }: { images: readonly string[]; title: string }) {
+  const slides = images ?? [];
 
   if (slides.length === 0) {
     return (
