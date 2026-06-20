@@ -18,13 +18,13 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Arunkumar S — Founder, Researcher, Mechanical Engineer" },
+   { title: "Arunkumar Sundaravel — Founder, Researcher, Mechanical Engineer" },
       {
         name: "description",
         content:
-          "Portfolio of Arunkumar S — Founder of Eaura, mechanical engineering researcher, and product builder working across smart manufacturing, EVs, and AI-driven automation.",
+          "Portfolio of Arunkumar Sundaravel — Founder of Eaura, mechanical engineering researcher, and product builder working across smart manufacturing, EVs, and AI-driven automation.",
       },
-      { property: "og:title", content: "Arunkumar S — Founder · Researcher · Engineer" },
+      { property: "og:title", content: "Arunkumar Sundaravel — Founder · Researcher · Engineer" },
       {
         property: "og:description",
         content:
