@@ -929,7 +929,7 @@ export function Footer() {
   return (
     <footer className="relative border-t border-border py-10 px-6">
       <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-muted-foreground uppercase tracking-widest">
-        <div>© {new Date().getFullYear()} Arunkumar S · Designed & Built in Chennai</div>
+        <div>© {new Date().getFullYear()} Arunkumar Sundaravel · Designed & Built in Chennai</div>
         <div className="flex items-center gap-4">
           <a href={resume.linkedin} target="_blank" rel="noreferrer" className="hover:text-accent transition">
             LinkedIn
