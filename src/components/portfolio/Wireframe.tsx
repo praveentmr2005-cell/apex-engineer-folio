@@ -65,13 +65,35 @@ export function Wireframe() {
             </g>
           ))}
           {/* dimension labels */}
-          <text x="200" y="14" textAnchor="middle" fill="oklch(0.78 0.16 215)" fontSize="8" fontFamily="ui-monospace,monospace" opacity="0.7">
+          <text
+            x="200"
+            y="14"
+            textAnchor="middle"
+            fill="oklch(0.78 0.16 215)"
+            fontSize="8"
+            fontFamily="ui-monospace,monospace"
+            opacity="0.7"
+          >
             Ø 360.00
           </text>
-          <text x="6" y="204" fill="oklch(0.78 0.16 215)" fontSize="8" fontFamily="ui-monospace,monospace" opacity="0.7">
+          <text
+            x="6"
+            y="204"
+            fill="oklch(0.78 0.16 215)"
+            fontSize="8"
+            fontFamily="ui-monospace,monospace"
+            opacity="0.7"
+          >
             A
           </text>
-          <text x="388" y="204" fill="oklch(0.78 0.16 215)" fontSize="8" fontFamily="ui-monospace,monospace" opacity="0.7">
+          <text
+            x="388"
+            y="204"
+            fill="oklch(0.78 0.16 215)"
+            fontSize="8"
+            fontFamily="ui-monospace,monospace"
+            opacity="0.7"
+          >
             A'
           </text>
         </svg>

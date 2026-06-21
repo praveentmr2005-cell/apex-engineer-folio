@@ -63,79 +63,77 @@ export const resume = {
   ],
 
   projects: [
-  {
-    title: "Mobile Banana Processing Unit",
-    client: "Trident Fruits, Mumbai",
-    duration: "Dec 2024 – Mar 2025",
-    summary:
-      "A mobile post-harvest processing unit designed for on-site deployment — de-handing, cleaning, grading, and packaging — engineered for portability and throughput.",
-    tech: ["SolidWorks", "GD&T", "Mechanical Layout", "DFM"],
-    disciplines: ["Mechanical Design", "Process Engineering", "Agri-Tech"],
-    outcomes: [
-      "Multi-stage quality control workflow with fungicide wash, grading, labeling, boxing",
-      "Optimized layout for portability and on-site agricultural deployment",
-      "Extended shelf life and reduced spoilage in transit",
-    ],
-  },
+    {
+      title: "Mobile Banana Processing Unit",
+      client: "Trident Fruits, Mumbai",
+      duration: "Dec 2024 – Mar 2025",
+      summary:
+        "A mobile post-harvest processing unit designed for on-site deployment — de-handing, cleaning, grading, and packaging — engineered for portability and throughput.",
+      tech: ["SolidWorks", "GD&T", "Mechanical Layout", "DFM"],
+      disciplines: ["Mechanical Design", "Process Engineering", "Agri-Tech"],
+      outcomes: [
+        "Multi-stage quality control workflow with fungicide wash, grading, labeling, boxing",
+        "Optimized layout for portability and on-site agricultural deployment",
+        "Extended shelf life and reduced spoilage in transit",
+      ],
+      images: ["/banana_unit.png", "/banana-mpu.png"],
+    },
+    {
+      title: "AI-Assisted Lignite Rock Separation System",
+      client: "NLC India Limited, Neyveli",
+      duration: "May 2025 – Present",
+      summary:
+        "Designed and developed an AI-assisted rock separation system for lignite mining operations using computer vision, conveyor systems, pneumatic diversion mechanisms, and mechanical screening.",
+      tech: ["SolidWorks", "YOLOv11", "Python", "Pneumatic Systems", "Conveyor Design"],
+      disciplines: ["Mechanical Design", "AI", "Heavy Industry"],
+      outcomes: [
+        "Designed conveyor-based material handling system",
+        "Integrated YOLOv11 object detection",
+        "Developed pneumatic rock diversion mechanism",
+        "Improved lignite stream quality through automated segregation",
+      ],
+      images: [
+        "/Nlc_1.png",
+        "/Nlc_2.png",
+        "/Nlc_3.png",
+        "/Nlc_4.png",
+        "/Nlc_5.png",
+        "/Nlc_6.png",
+        "/Nlc_7.png",
+      ],
+    },
+    {
+      title: "Driver Authentication & Monitoring System",
+      client: "Coursework",
+      duration: "Jan 2025 – May 2025",
+      summary:
+        "An intelligent driver authorization stack combining biometric, RFID, and continuous facial recognition to ensure only licensed, verified individuals operate a vehicle.",
+      tech: ["Python", "Computer Vision", "RFID", "Embedded Systems"],
+      disciplines: ["Mechatronics", "Safety Systems", "AI"],
+      outcomes: [
+        "Fingerprint + RFID license verification gates vehicle start",
+        "Continuous facial recognition during operation",
+        "Real-time unauthorized access detection",
+      ],
+      images: ["/Lic_1.png"],
+    },
+    {
+      title: "Compact Agricultural E-Transportation Vehicle",
+      client: "Project Team Lead",
+      duration: "Jan 2026 – Present",
+      summary:
+        "A farm-based electric transport vehicle built to move banana bunches from inside the plantation to the loading area, engineered for uneven terrain.",
+      tech: ["Vehicle Dynamics", "Suspension Design", "Powertrain", "Chassis"],
+      disciplines: ["EV", "Vehicle Engineering", "Agri-Logistics"],
+      outcomes: [
+        "Leading vehicle dynamics subsystem — suspension, steering, braking, stability",
+        "Coordinating powertrain, chassis, and electronics teams",
+        "Optimized maneuverability and load-carrying efficiency",
+      ],
+      images: ["/Baja_1.png", "/Baja_2.png", "/Baja_3.png"],
+    },
+  ],
 
-  {
-    title: "AI-Assisted Lignite Rock Separation System",
-    organization: "NLC India Limited, Neyveli",
-    description:
-      "Designed and developed an AI-assisted rock separation system for lignite mining operations using computer vision, conveyor systems, pneumatic diversion mechanisms, and mechanical screening.",
-    technologies: [
-      "SolidWorks",
-      "YOLOv11",
-      "Python",
-      "Mechanical Design",
-      "Pneumatic Systems",
-      "Conveyor Design",
-    ],
-    highlights: [
-      "Designed conveyor-based material handling system",
-      "Integrated YOLOv11 object detection",
-      "Developed pneumatic rock diversion mechanism",
-      "Improved lignite stream quality through automated segregation",
-    ],
-    images: [
-      "/images/nlc-1.jpg",
-      "/images/nlc-2.jpg",
-      "/images/nlc-3.jpg",
-      "/images/nlc-4.jpg",
-    ],
-    featured: true,
-  },
-
-  {
-    title: "Driver Authentication & Monitoring System",
-    client: "Coursework",
-    duration: "Jan 2025 – May 2025",
-    summary:
-      "An intelligent driver authorization stack combining biometric, RFID, and continuous facial recognition to ensure only licensed, verified individuals operate a vehicle.",
-    tech: ["Python", "Computer Vision", "RFID", "Embedded Systems"],
-    disciplines: ["Mechatronics", "Safety Systems", "AI"],
-    outcomes: [
-      "Fingerprint + RFID license verification gates vehicle start",
-      "Continuous facial recognition during operation",
-      "Real-time unauthorized access detection",
-    ],
-  },
-
-  {
-    title: "Compact Agricultural E-Transportation Vehicle",
-    client: "Project Team Lead",
-    duration: "Jan 2026 – Present",
-    summary:
-      "A farm-based electric transport vehicle built to move banana bunches from inside the plantation to the loading area, engineered for uneven terrain.",
-    tech: ["Vehicle Dynamics", "Suspension Design", "Powertrain", "Chassis"],
-    disciplines: ["EV", "Vehicle Engineering", "Agri-Logistics"],
-    outcomes: [
-      "Leading vehicle dynamics subsystem — suspension, steering, braking, stability",
-      "Coordinating powertrain, chassis, and electronics teams",
-      "Optimized maneuverability and load-carrying efficiency",
-    ],
-  },
-],
   research: [
     {
       title:
@@ -169,13 +167,23 @@ export const resume = {
     name: "Eaura",
     role: "Founder / CEO",
     status: "Government Approved Startup",
-    mission: "Help senior citizens live independently through a voice-first AI companion paired with thoughtful hardware.",
+    mission:
+      "Help senior citizens live independently through a voice-first AI companion paired with thoughtful hardware.",
     problem:
       "Aging populations need ambient, dignified assistance — not another app to learn. Existing solutions are either too clinical or too complex.",
     pillars: [
-      { title: "Voice-first AI", body: "Reminders, conversation, emergency support — designed for the way seniors actually speak." },
-      { title: "Smart scheduling", body: "Medication, appointments, and daily routines orchestrated quietly in the background." },
-      { title: "Hardware integration", body: "Purpose-built device that lives in the home — no phones, no screens, no friction." },
+      {
+        title: "Voice-first AI",
+        body: "Reminders, conversation, emergency support — designed for the way seniors actually speak.",
+      },
+      {
+        title: "Smart scheduling",
+        body: "Medication, appointments, and daily routines orchestrated quietly in the background.",
+      },
+      {
+        title: "Hardware integration",
+        body: "Purpose-built device that lives in the home — no phones, no screens, no friction.",
+      },
     ],
     milestones: [
       "Government approval secured (2025)",
@@ -185,12 +193,24 @@ export const resume = {
   },
 
   skills: [
-    { category: "CAD & Design", level: 92, items: ["SolidWorks", "AutoCAD", "Fusion 360", "GD&T", "2D Documentation"] },
+    {
+      category: "CAD & Design",
+      level: 92,
+      items: ["SolidWorks", "AutoCAD", "Fusion 360", "GD&T", "2D Documentation"],
+    },
     { category: "Simulation", level: 85, items: ["ANSYS", "LS-Dyna", "Hypermesh", "FEA"] },
     { category: "Manufacturing", level: 80, items: ["DFM", "Prototyping", "Smart Manufacturing"] },
-    { category: "Research", level: 88, items: ["Publication Writing", "Experimental Design", "Data Analysis"] },
+    {
+      category: "Research",
+      level: 88,
+      items: ["Publication Writing", "Experimental Design", "Data Analysis"],
+    },
     { category: "Programming", level: 75, items: ["Python", "C", "SQL", "HTML"] },
-    { category: "Product Development", level: 90, items: ["3D Modelling", "Product Design", "System Architecture"] },
+    {
+      category: "Product Development",
+      level: 90,
+      items: ["3D Modelling", "Product Design", "System Architecture"],
+    },
   ],
 
   leadership: [

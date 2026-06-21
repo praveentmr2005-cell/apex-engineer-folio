@@ -31,9 +31,7 @@ export function Nav() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "backdrop-blur-xl bg-background/70 border-b border-border"
-          : "bg-transparent"
+        scrolled ? "backdrop-blur-xl bg-background/70 border-b border-border" : "bg-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
@@ -44,7 +42,9 @@ export function Nav() {
           <span className="grid h-7 w-7 place-items-center rounded-md bg-gradient-to-br from-primary to-primary-glow text-primary-foreground font-bold">
             A
           </span>
-          <span className="text-foreground">ARUNKUMAR<span className="text-accent">.S</span></span>
+          <span className="text-foreground">
+            ARUNKUMAR <span className="text-accent">SUNDARAVEL</span>
+          </span>
         </button>
 
         <ul className="hidden md:flex items-center gap-1 rounded-full border border-border bg-surface/60 backdrop-blur px-1 py-1">
@@ -53,7 +53,9 @@ export function Nav() {
               <button
                 onClick={() => go(n.id)}
                 className={`relative rounded-full px-4 py-1.5 text-sm transition-colors ${
-                  active === n.id ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+                  active === n.id
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {active === n.id && (
